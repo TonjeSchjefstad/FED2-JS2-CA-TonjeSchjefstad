@@ -1,4 +1,5 @@
 # Pulse - Social Media App
+![image](link)
 
 ## Description
 
