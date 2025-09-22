@@ -1,0 +1,18 @@
+:root {
+    --primary-background-color: #F8FAF9;
+    --primary-text-color: #2C3E50;
+    --secondary-text-color: #F5F5F5;
+    --button-color: #6B9080;
+    --button-hover-color: #5A7A6B;
+    --button-active-color: #4F6B5C;
+    --footer-background-color: #4F6B5C;
+    --card-color: #FDFEFD;
+    --card-shadow: #6B9080;
+    --border: #D4E2D8;
+    --slogan-color: #A4BEB0;
+    --input-background-color: #FDFEFD;
+
+    --font-family-header: 'inter', sans-serif;
+    --font-family-body: 'inter', sans-serif;
+    --font-logo: 'Exo 2', serif;
+}
