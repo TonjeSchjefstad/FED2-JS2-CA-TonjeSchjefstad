@@ -9,10 +9,9 @@
 .login-section, .register-section {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     gap: 20px;
-    margin: 50px 40px;
+    margin: 20px 40px 100px 40px;
 }
 
 .h1-login, .h1-register {
