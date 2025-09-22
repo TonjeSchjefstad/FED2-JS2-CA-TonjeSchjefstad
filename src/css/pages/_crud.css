@@ -1,0 +1,39 @@
+@import url(../base/_variables.css);
+
+/* Create and Edit Pages*/
+h1 {
+    text-align: center;
+}
+
+.create-post, .edit-post {
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px 20px 60px 20px;
+    background-color: var(--card-color);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-post div, .edit-post div {
+    margin-bottom: 20px;
+}
+
+.create-post label, .edit-post label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 500;
+    font-size: 0.9rem;
+}
+
+.create-post input[type="text"],
+.create-post textarea,
+.edit-post input[type="text"],
+.edit-post textarea {
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .create-post, .edit-post {
+        max-width: 750px;
+    }
+}
