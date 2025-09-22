@@ -6,22 +6,32 @@ This project is a front-end for a social media application where users can creat
 
 Live Demo: https://pulse-social-media-app.netlify.app/
 
-## Tech Stack
-- HTML5
-- CSS
-- JavaScript ( ES6 modules )
-- Vite ( Single-Page Application setup )
-- Noroff Social API
+## Getting Started
+### Installing
+1. Clone the repository:
 
-## User Features
-- Register new user
-- Login and logout
-- Create, edit and delete posts
-- View all posts
-- View single post by ID
-- View own profile
-- View other profiles
-- Follow and unfollow users
+```bash
+git clone https://github.com/TonjeSchjefstad/FED2-JS2-CA-TonjeSchjefstad.git
+```
+
+2. Install dependencies:
+
+```
+npm install
+```
+
+### Running
+
+Start the development server with:
+
+```bash
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
 
 ## Project Structure
 ```bash
@@ -52,32 +62,22 @@ Live Demo: https://pulse-social-media-app.netlify.app/
 - src/css/ → Stylesheets
 - src/js/ → JavaScript modules
 
-## Getting Started
-### Installing
-1. Clone the repository:
+## Tech Stack
+- HTML5
+- CSS
+- JavaScript ( ES6 modules )
+- Vite ( Single-Page Application setup )
+- Noroff Social API
 
-```bash
-git clone https://github.com/TonjeSchjefstad/FED2-JS2-CA-TonjeSchjefstad.git
-```
-
-2. Install dependencies:
-
-```
-npm install
-```
-
-### Running
-
-Start the development server with:
-
-```bash
-npm run dev
-```
-
-Build for production:
-```bash
-npm run build
-```
+## User Features
+- Register new user
+- Login and logout
+- Create, edit and delete posts
+- View all posts
+- View single post by ID
+- View own profile
+- View other profiles
+- Follow and unfollow users
 
 ## JSDocs
 - loginUser (src/js/api/auth/login.js) → Handles user authentication
