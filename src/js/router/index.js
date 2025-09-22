@@ -1,33 +1,43 @@
+
+
 export default async function router(pathname = window.location.pathname) {
-  switch (pathname) {
-    case "/":
-    case "/index.html":
-      break;
-    case "/auth/":
-      await import("./views/auth.js");
-      break;
-    case "/auth/login/":
-      await import("./views/login.js");
-      break;
-    case "/auth/register/":
-      await import("./views/register.js");
-      break;
-    case "/post/":
-      await import("./views/post.js");
-      break;
-    case "/post/edit/":
-      await import("./views/postEdit.js");
-      break;
-    case "/post/create/":
-      await import("./views/postCreate.js");
-      break;
-    case "/profile/":
-      await import("./views/profile.js");
-      break;
-    case "/profile/edit.html":
-      await import("../ui/profile/update.js");
-      break;
-    default:
-      await import("./views/notFound.js");
+  
+  pathname = pathname.replace(/\/+$/, "") + "/";
+
+  const routes = {
+    "/": () => import("./views/home.js"),
+    "/index.html": () => import("./views/home.js"),
+    "/auth/login/": () => import("./views/login.js"),
+    "/auth/register/": () => import("./views/register.js"),
+    "/post/": () => import("./views/post.js"),
+    "/post/edit/": () => import("./views/postEdit.js"),
+    "/post/create/": () => import("./views/postCreate.js"),
+    "/profile/": () => import("./views/profile.js"),
+    "/profile/edit/": () => import("./views/profileEdit.js"),
+  };
+
+
+  const load = routes[pathname] || (() => import("./views/notFound.js"));
+
+  try {
+    const module = await load();
+    if (typeof module.default === "function") {
+      module.default(navigate);
+    } else {
+      console.error("View module does not export a default function:", module);
+    }
+  } catch (err) {
+    console.error("Error loading view:", err);
   }
 }
+
+export function navigate(path) {
+  history.pushState({}, "", path);
+  const url = new URL(path, window.location.origin);
+  router(url.pathname);
+}
+
+window.addEventListener("popstate", () => {
+  router(window.location.pathname);
+
+});
