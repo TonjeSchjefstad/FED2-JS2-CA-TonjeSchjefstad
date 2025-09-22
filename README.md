@@ -24,6 +24,7 @@ Live Demo: https://pulse-social-media-app.netlify.app/
 - Follow and unfollow users
 
 ## Project Structure
+```bash
 ├── public/
 │   └── images/
 ├── src/
@@ -44,6 +45,7 @@ Live Demo: https://pulse-social-media-app.netlify.app/
 ├── package-lock.json
 ├── package.json
 └── vite.config.js
+```
 
 ## Folder highlights
 - public/images/ → Assets
