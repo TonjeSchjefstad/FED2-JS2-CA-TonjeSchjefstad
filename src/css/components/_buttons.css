@@ -1,0 +1,143 @@
+@import url(../base/_variables.css);
+
+/* Primary and secondary styles for buttons */
+.primary-button, .secondary-button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 80px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+}
+
+.primary-button {
+    background-color: var(--button-color);
+    color: var(--secondary-text-color);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.secondary-button {
+    background-color: #FDFEFD;
+    border: 1px solid #6B9080;
+    color: var(--primary-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: var(--button-color);
+    color: var(--secondary-text-color);
+    border: none;
+}
+
+/* Button for Logout */
+.logout-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 16px;
+    z-index: 9999;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Buttons for Login and register form */
+#login-button, #register-button {
+    margin-top: 20px;
+}
+
+/* Buttons for Create post and Edit Post */
+.create-post .primary-button, .edit-post .primary-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Button for Edit Profile */
+#edit-profile-button {
+    margin-top: 40px
+}
+
+/* Updating Profile Button */
+#save-button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    width: 100%;
+
+}
+
+/* Follow/unfollow button */
+.follow-button {
+    padding: 14px 50px;
+    font-size: 14px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.follow-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/*Create Post button that appears if no posts are yet created*/
+.create-post-button-profile {
+    display: inline-block;
+    margin: 16px auto 32px auto;
+    padding: 12px 24px;
+}
+
+/* Button for Edit Post */
+.edit-post-button {
+    margin-top: 1.5rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-post-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Button for Delete Post */
+.delete-post-button {
+    margin-top: 24px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-post-button:hover {
+    background-color: #c0392b;
+}
