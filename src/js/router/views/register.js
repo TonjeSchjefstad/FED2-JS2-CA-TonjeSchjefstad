@@ -28,7 +28,7 @@ export default function registerView(navigate) {
               </div>
 
               <button class="primary-button" id="register-button">Register</button>
-              <a href="/auth/login/">
+              <a href="#/auth/login">
                 <p class="register-p">Already have an account? <strong> Login! </strong></p>
               </a>
             </form>
@@ -45,5 +45,15 @@ export default function registerView(navigate) {
   const registerForm = document.getElementById("register-form");
   if (registerForm) {
     registerForm.addEventListener("submit", onRegisterFormSubmit); 
+  }
+
+  const loginLink = document.getElementById("login-link");
+  if (loginLink) {
+    loginLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      import("../../router/index.js").then((module) => {
+        module.default("/auth/login/");
+      });
+    });
   }
 }

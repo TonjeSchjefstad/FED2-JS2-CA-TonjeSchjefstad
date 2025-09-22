@@ -17,7 +17,7 @@ export default function loginView(navigate) {
               <input type="password" name="password" id="password" placeholder="your password" required />
             </div>
             <button type="submit" class="primary-button" id="login-button">Login</button>
-            <a href="/auth/register/">
+            <a href="#/auth/register">
               <p class="login-p">Don't have an account? <strong> Sign Up! </strong></p>
             </a>
           </form>
@@ -36,4 +36,15 @@ export default function loginView(navigate) {
   } else {
     console.error("Login form not found! Check your HTML has name='login' or id='login-form'");
   }
+
+  const registerLink = document.getElementById("register-link");
+  if (registerLink) {
+    registerLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      import("../../router/index.js").then((module) => {
+        module.default("/auth/register/");
+      });
+    });
+  }
 }
+
