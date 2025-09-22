@@ -153,6 +153,17 @@ p, a, span, li, input, textarea, label, .post-body {
   margin: 0;
   font-size: 0.9rem;
 }
+
+/* Lazy loading*/
+.post-media.lazy {
+  filter: blur(5px);
+  transition: filter 0.3s;
+}
+
+.post-media.loaded {
+  filter: blur(0);
+}
+
 /*Desktop */
 @media(min-width: 768px) {
     
