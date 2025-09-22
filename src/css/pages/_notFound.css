@@ -1,0 +1,39 @@
+@import url(../base/_variables.css);
+
+.not-found-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.not-found-container {
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  margin: 0;
+  color: #ff4d4f;
+}
+
+.not-found-subtitle {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.not-found-message {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
