@@ -67,6 +67,7 @@ npm run build
 - CSS
 - JavaScript ( ES6 modules )
 - Vite ( Single-Page Application setup )
+- Netlify
 - Noroff Social API
 
 ## User Features
