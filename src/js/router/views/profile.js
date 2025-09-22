@@ -7,7 +7,7 @@ export default function profileView(navigate) {
 
     if (!authGuard()) {
         console.error("Not logged in — sending user to login page.");
-        navigate("/auth/login/"); 
+        navigate("/auth/login"); 
         return;
     }
 

@@ -107,14 +107,14 @@ export function createNavigation() {
 }
 
 export function initializeNavigation() {
-  const currentPath = window.location.pathname;
+  const currentPath = location.hash.slice(1) || "/";
 
   const authenticatedPages = [
     "/post/",
     "/post/create/",
     "/post/edit/",
     "/profile/",
-    "/profile/edit.html/",
+    "/profile/edit/",
   ];
   const shouldShowNav = authenticatedPages.includes(currentPath);
 

@@ -12,7 +12,7 @@ export async function onRegisterFormSubmit(event) {
     await registerUser(formFields);
     showMessage("Registration successful! Redirecting to login...");
     setTimeout(() => {
-      navigate("/auth/login/");
+      navigate("/auth/login");
     }, 1000);
   } catch (error) {
     console.error("register failed", error);

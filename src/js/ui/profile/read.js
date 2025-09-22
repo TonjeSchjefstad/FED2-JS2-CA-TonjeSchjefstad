@@ -130,7 +130,7 @@ function createActionButton(profile, currentUser, isOwnProfile) {
   if (isOwnProfile) {
     button.className = "primary-button";
     button.textContent = "Edit Profile";
-    button.onclick = () => (navigate("/profile/edit/"));
+    button.onclick = () => (navigate("/profile/edit"));
   } else {
     button.className = "follow-button";
     button.id = "follow-button";

@@ -1,12 +1,10 @@
+import { initializeNavigation } from "../ui/global/navBar.js";
 
-
-export default async function router(pathname = window.location.pathname) {
-  
+export default async function router(pathname = location.hash.slice(1) || "/") {
   pathname = pathname.replace(/\/+$/, "") + "/";
 
   const routes = {
     "/": () => import("./views/home.js"),
-    "/index.html": () => import("./views/home.js"),
     "/auth/login/": () => import("./views/login.js"),
     "/auth/register/": () => import("./views/register.js"),
     "/post/": () => import("./views/post.js"),
@@ -16,13 +14,13 @@ export default async function router(pathname = window.location.pathname) {
     "/profile/edit/": () => import("./views/profileEdit.js"),
   };
 
-
   const load = routes[pathname] || (() => import("./views/notFound.js"));
 
   try {
     const module = await load();
     if (typeof module.default === "function") {
       module.default(navigate);
+      initializeNavigation();
     } else {
       console.error("View module does not export a default function:", module);
     }
@@ -32,12 +30,9 @@ export default async function router(pathname = window.location.pathname) {
 }
 
 export function navigate(path) {
-  history.pushState({}, "", path);
-  const url = new URL(path, window.location.origin);
-  router(url.pathname);
+  location.hash = path;
 }
 
-window.addEventListener("popstate", () => {
-  router(window.location.pathname);
-
+window.addEventListener("hashchange", () => {
+  router(location.hash.slice(1));
 });

@@ -59,7 +59,7 @@ export async function onUpdatePost(event) {
     showMessage("Post updated successfully!", "success");
 
     setTimeout(() => {
-      navigate("/post/");
+      navigate("/post");
     }, 1500);
   } catch (error) {
     console.error("Failed to update post:", error);
@@ -87,7 +87,7 @@ function showError(message) {
   });
 
   document.getElementById("back-btn")?.addEventListener("click", () => {
-    navigate("/post/");
+    navigate("/post");
   });
 }
 

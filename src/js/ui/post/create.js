@@ -48,7 +48,7 @@ export async function onCreatePost(event) {
     showMessage("Post created successfully!");
 
     setTimeout(() => {
-      navigate("/post/");
+      navigate("/post");
     }, 1000);
   } catch (error) {
     console.error("Failed to create post:", error);

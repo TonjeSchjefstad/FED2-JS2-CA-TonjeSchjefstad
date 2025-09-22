@@ -100,7 +100,7 @@ async function handleFormSubmit(event) {
 
     await updateUserProfile(currentUser.name, profileData);
     showMessage("Profile updated successfully!");
-    navigate ("/profile/");
+    navigate ("/profile");
   } catch (error) {
     console.error("Profile update failed:", error);
     showMessage(error.message || "Failed to update profile. Please try again.");
