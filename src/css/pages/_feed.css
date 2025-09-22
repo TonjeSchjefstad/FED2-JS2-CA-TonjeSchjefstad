@@ -1,0 +1,171 @@
+@import url(../base/_variables.css);
+
+.feed-header {
+    margin: 0 20px;
+}
+
+.h1-feed {
+    font-family: var(--font-logo);
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Search bar in Feed Page*/
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 15px;
+    border: 1px solid var(--button-color);
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: var(--card-color);
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.search-bar:focus, .search-bar:hover {
+    outline: none;
+    border-color: var(--button-color);
+    box-shadow: 0 0 5px rgba(107, 144, 128, 0.5);
+}
+
+/* Feed Page Posts */
+#display-container {
+    margin: 0 20px 20px 20px;
+}
+
+.post-item {
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    padding: 20px;
+    margin-bottom: 16px;
+    background: white;
+    cursor: pointer;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.post-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+.post-author, .overlay-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.author-avatar, .overlay-author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name, .overlay-author-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.post-title {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+}
+
+.post-body {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+.post-media, .post-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 350px;
+    border-radius: 20px;
+}
+
+/*Overlay styling */
+#post-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#post-overlay.hidden {
+    display: none !important;
+}
+
+.overlay-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-button:hover {
+    color: var(--button-color);
+}
+
+.overlay-h2 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+@media(min-width: 768px) {
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .author-avatar, .overlay-author-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .author-name, .overlay-author-name {
+        font-weight: 600;
+    }
+
+    .post-item {
+        padding: 30px;
+    }
+}
