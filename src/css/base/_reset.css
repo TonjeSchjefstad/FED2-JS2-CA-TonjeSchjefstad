@@ -1,0 +1,28 @@
+@import url(../base/_variables.css);
+
+* {
+
+  &:before,
+  &:after,
+  & {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
