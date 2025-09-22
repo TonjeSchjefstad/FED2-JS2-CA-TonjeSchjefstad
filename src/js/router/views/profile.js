@@ -14,7 +14,6 @@ export default function profileView(navigate) {
     const existingOverlay = document.getElementById("post-overlay");
     if (existingOverlay) {
         existingOverlay.remove();
-        console.log("Removed existing overlay");
     }
 
     const postOverlay = new PostOverlay();
