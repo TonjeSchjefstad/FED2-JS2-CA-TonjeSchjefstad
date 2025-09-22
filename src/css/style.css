@@ -127,6 +127,32 @@ p, a, span, li, input, textarea, label, .post-body {
     margin-left: auto;
 }
 
+/*Loading*/
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #6B9080;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading p {
+  margin: 0;
+  font-size: 0.9rem;
+}
 /*Desktop */
 @media(min-width: 768px) {
     
