@@ -16,7 +16,9 @@ export async function initializeProfilePage(postOverlay) {
     showLoading("#profile-info", "Loading profile...");
     document.querySelector("#user-posts").innerHTML = ""; 
 
-    const params = new URLSearchParams(window.location.search);
+    const hash = window.location.hash;
+    const query = hash.includes("?") ? hash.split("?")[1] : "";
+    const params = new URLSearchParams(query);
     const viewedName = params.get("name");
     const currentUser = getCurrentUser();
     const isOwnProfile = !viewedName || viewedName === currentUser.name;
@@ -130,7 +132,7 @@ function createActionButton(profile, currentUser, isOwnProfile) {
   if (isOwnProfile) {
     button.className = "primary-button";
     button.textContent = "Edit Profile";
-    button.onclick = () => (navigate("/profile/edit"));
+    button.onclick = () => (navigate("/profile/edit/"));
   } else {
     button.className = "follow-button";
     button.id = "follow-button";

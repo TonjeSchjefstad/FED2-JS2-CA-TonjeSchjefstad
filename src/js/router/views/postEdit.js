@@ -3,8 +3,10 @@ import { initializePostEdit } from "../../ui/post/update.js";
 
 
 export default function postEdit(navigate) {
-
+  const params = new URLSearchParams(location.hash.split("?")[1]);
+  const postId = params.get("id");
   const app = document.getElementById("app");
+  
   app.innerHTML = `
     <form class="edit-post" name="edit-post" id="edit-post-form">
       <h1>Edit Post</h1>
@@ -28,7 +30,7 @@ export default function postEdit(navigate) {
   `;
 
   if (authGuard()) {
-    initializePostEdit(); 
+    initializePostEdit(postId); 
   } else {
     console.warn("Unauthorized access to post edit view");
   }

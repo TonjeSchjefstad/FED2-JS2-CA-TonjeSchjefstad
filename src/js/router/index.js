@@ -1,7 +1,7 @@
 import { initializeNavigation } from "../ui/global/navBar.js";
 
 export default async function router(pathname = location.hash.slice(1) || "/") {
-  pathname = pathname.replace(/\/+$/, "") + "/";
+  const cleanPath = pathname.split("?")[0].replace(/\/+$/, "") + "/";
 
   const routes = {
     "/": () => import("./views/home.js"),
@@ -14,7 +14,7 @@ export default async function router(pathname = location.hash.slice(1) || "/") {
     "/profile/edit/": () => import("./views/profileEdit.js"),
   };
 
-  const load = routes[pathname] || (() => import("./views/notFound.js"));
+  const load = routes[cleanPath] || (() => import("./views/notFound.js"));
 
   try {
     const module = await load();

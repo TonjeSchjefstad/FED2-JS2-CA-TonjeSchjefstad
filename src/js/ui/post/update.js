@@ -5,7 +5,9 @@ import { showMessage } from "../../utilities/showMessage.js";
 import { navigate } from "../../router/index.js";
 
 export function getPostIdFromUrl() {
-  const urlParams = new URLSearchParams(window.location.search);
+  const hash = window.location.hash;
+  const query = hash.includes("?") ? hash.split("?")[1] : "";
+  const urlParams = new URLSearchParams(query);
   return urlParams.get("id");
 }
 
