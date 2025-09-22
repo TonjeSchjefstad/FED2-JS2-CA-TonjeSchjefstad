@@ -1,13 +1,10 @@
-import router from "./js/router/index.js";
-import { initializeNavigation } from "./js/ui/global/navigation.js";
+import router from "./router/index.js";
+import { initializeNavigation } from "./ui/global/navBar.js";
 
 await router(window.location.pathname);
 
 if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-        initializeNavigation();
-    });
-
+    document.addEventListener("DOMContentLoaded", initializeNavigation);
 } else {
     initializeNavigation();
 }
