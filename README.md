@@ -75,7 +75,7 @@ npm run build
 - Login and logout
 - Create, edit and delete posts
 - View all posts
-- View single post by ID
+- View single post by ID → Opens in an overlay
 - View own profile
 - View other profiles
 - Follow and unfollow users
