@@ -1,5 +1,5 @@
 # Pulse - Social Media App
-![image]([link](https://www.imghippo.com/i/ILd5513zj.png))
+![image](https://i.imghippo.com/files/ILd5513zj.png)
 
 ## Description
 This project is a front-end for a social media application where users can create, read, update, and delete their own posts. In addition to post management, the app includes social features such as following and unfollowing other users.
