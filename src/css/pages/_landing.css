@@ -67,7 +67,7 @@
 
 /*Desktop */
 @media(min-width: 768px) {
-    
+
     .landing-header {
         padding: 0;
         margin: 0;
@@ -92,6 +92,15 @@
         padding: 20px;
     }
 
+    .h1-welcome-big {
+        font-size: 5rem;
+    }
+
+    .welcome-p {
+        font-size: 1.3rem;
+        max-width: 300px;
+    }
+
     .slogan-section {
         width: 50%;
         background-size: cover;
@@ -104,7 +113,7 @@
     }
 
     .slogan-thin, .slogan-thick {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     .slogan-thin {
