@@ -1,5 +1,5 @@
 # Pulse - Social Media App
-![image](link)
+![image](https://i.imghippo.com/files/ILd5513zj.png)
 
 ## Description
 This project is a front-end for a social media application where users can create, read, update, and delete their own posts. In addition to post management, the app includes social features such as following and unfollowing other users.
@@ -75,7 +75,7 @@ npm run build
 - Login and logout
 - Create, edit and delete posts
 - View all posts
-- View single post by ID
+- View single post by ID → Opens in an overlay
 - View own profile
 - View other profiles
 - Follow and unfollow users
