@@ -73,7 +73,7 @@
 .stat-number {
     display: block;
     font-size: 20px;
-    font-weight: semibold;
+    font-weight: 500;
     color: var(--button-color);
     margin-bottom: 4px;
 }
