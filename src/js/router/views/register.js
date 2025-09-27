@@ -10,21 +10,19 @@ export default function registerView(navigate) {
             <h1 class="h1-register">Register</h1>
             <form name="register" id="register-form">
               <div>
-                <label for="name">Full Name</label>
-                <input id="name" type="text" placeholder="Your full name" name="name" required maxlength="20"
-                  pattern="^[\w]+$" title="Please enter a username using only letters and numbers" />
+                <label for="name">Username</label>
+                <input id="name" type="text" placeholder="Your username" name="name" required title="Please enter a username using only letters and numbers" />
               </div>
 
               <div>
                 <label for="email">Email</label>
                 <input id="email" type="email" placeholder="example@stud.noroff.com" name="email" required
-                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
                   title="Please enter a valid noroff.no or stud.noroff.no address" />
               </div>
 
               <div>
                 <label for="password">Password</label>
-                <input type="password" name="password" placeholder="Your password" id="password" required minlength="8" />
+                <input type="password" name="password" placeholder="Your password" id="password" required minlength="8" autocomplete="new-password" />
               </div>
 
               <button class="primary-button" id="register-button">Register</button>

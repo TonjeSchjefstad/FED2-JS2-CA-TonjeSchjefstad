@@ -10,7 +10,6 @@ import { API_AUTH_REGISTER } from "../constants.js";
  * @throws Will throw an error if the registration request fails.
  */
 
-
 export async function registerUser(userDetails) {
   try {
     const fetchOptions = {
@@ -24,6 +23,8 @@ export async function registerUser(userDetails) {
     const response = await fetch(API_AUTH_REGISTER, fetchOptions);
 
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Register API error:", errorText);
       throw new Error(`Failed to register user: ${response.status}`);
     }
 

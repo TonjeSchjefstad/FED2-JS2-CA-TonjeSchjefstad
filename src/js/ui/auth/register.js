@@ -3,6 +3,7 @@ import { navigate } from "../../router/index.js";
 import { showMessage } from "../../utilities/showMessage.js";
 
 export async function onRegisterFormSubmit(event) {
+
   event.preventDefault();
 
   const formData = new FormData(event.target);
