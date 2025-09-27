@@ -169,6 +169,7 @@ p, a, span, li, input, textarea, label, .post-body {
 /* Message styling*/
 .message {
   position: fixed;
+  font-family: var(--font-family-body);
   top: 20px;
   right: 20px;
   padding: 1rem 2rem;
