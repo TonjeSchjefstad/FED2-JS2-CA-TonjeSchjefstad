@@ -10,11 +10,12 @@ import { handleDeletePost } from "../post/delete.js";
 import { showMessage } from "../../utilities/showMessage.js";
 import { showLoading } from "../../utilities/loading.js";
 import { navigate } from "../../router/index.js";
+import { showError } from "../../utilities/showError.js";
 
 export async function initializeProfilePage(postOverlay) {
   try {
     showLoading("#profile-info", "Loading profile...");
-    document.querySelector("#user-posts").innerHTML = ""; 
+    document.querySelector("#user-posts").innerHTML = "";
 
     const hash = window.location.hash;
     const query = hash.includes("?") ? hash.split("?")[1] : "";
@@ -132,7 +133,7 @@ function createActionButton(profile, currentUser, isOwnProfile) {
   if (isOwnProfile) {
     button.className = "primary-button";
     button.textContent = "Edit Profile";
-    button.onclick = () => (navigate("/profile/edit/"));
+    button.onclick = () => navigate("/profile/edit/");
   } else {
     button.className = "follow-button";
     button.id = "follow-button";
@@ -170,7 +171,10 @@ async function updateFollowButton(button, targetProfile, currentUser) {
         updateFollowButton(button, targetProfile, currentUser);
       } catch (error) {
         console.error("Detailed error in button click:", error);
-        showMessage("Failed to update follow status. Please try again.", "error");
+        showMessage(
+          "Failed to update follow status. Please try again.",
+          "error"
+        );
         button.disabled = false;
         button.textContent = following ? "Unfollow" : "Follow";
       }
@@ -264,8 +268,7 @@ function createPostElement(post, currentUser, postOverlay) {
     const editBtn = document.createElement("button");
     editBtn.className = "edit-post-button";
     editBtn.textContent = "Edit";
-    editBtn.onclick = () =>
-      navigate(`/post/edit/?id=${post.id}`);
+    editBtn.onclick = () => navigate(`/post/edit/?id=${post.id}`);
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-post-button";
@@ -285,21 +288,3 @@ function createPostElement(post, currentUser, postOverlay) {
 
   return postDiv;
 }
-
-function showError(message) {
-  document.querySelector("#profile-info").innerHTML = `
-    <div class="error-message">
-      <h2>Error Loading Profile</h2>
-      <p>${message}</p>
-       <button id="try-again-btn" class="primary-button">Try Again</button>
-    </div>
-  `;
-
-  const tryAgainBtn = document.getElementById("try-again-btn");
-  if (tryAgainBtn) {
-    tryAgainBtn.addEventListener("click", () => {
-      window.location.reload(); 
-    });
-  }
-}
-
