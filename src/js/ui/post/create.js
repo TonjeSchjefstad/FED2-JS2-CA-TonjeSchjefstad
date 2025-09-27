@@ -45,7 +45,7 @@ export async function onCreatePost(event) {
 
     await createPost(postData);
 
-    showMessage("Post created successfully!");
+    showMessage("Post created successfully!", "success");
 
     setTimeout(() => {
       navigate("/post");

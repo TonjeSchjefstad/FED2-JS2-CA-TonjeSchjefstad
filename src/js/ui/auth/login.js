@@ -17,6 +17,9 @@ export async function onLoginFormSubmit(event) {
     localStorage.setItem("loggedIn", "true");
     addToLocalStorage("user", json.data);
 
+    showMessage("Login successful!", "success");
+
+
     setTimeout(() => {
       navigate("/post/");
       import("../../ui/global/navBar.js").then((module) => {
@@ -25,6 +28,6 @@ export async function onLoginFormSubmit(event) {
     }, 1000);
   } catch (error) {
     console.error("login failed", error);
-    showMessage("Login failed. Please check your credentials and try again.");
+    showMessage("Login failed. Please check your credentials and try again.", "error");
   }
 }
