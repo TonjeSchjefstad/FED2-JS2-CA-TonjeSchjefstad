@@ -3,6 +3,7 @@ import { validatePostData } from "../../utilities/validators.js";
 import { fetchPostById } from "../../api/post/read.js";
 import { showMessage } from "../../utilities/showMessage.js";
 import { navigate } from "../../router/index.js";
+import { showError } from "../../utilities/showError.js";
 
 export function getPostIdFromUrl() {
   const hash = window.location.hash;
@@ -70,27 +71,6 @@ export async function onUpdatePost(event) {
     submitButton.disabled = false;
     submitButton.textContent = originalText;
   }
-}
-
-function showError(message) {
-  const main = document.querySelector("main");
-  if (!main) return;
-
-  main.innerHTML = `
-    <div class="error-message">
-      <p>${message}</p>
-      <button id="try-again-btn">Try Again</button>
-      <button id="back-btn">Back</button>
-    </div>
-  `;
-
-  document.getElementById("try-again-btn")?.addEventListener("click", () => {
-    location.reload();
-  });
-
-  document.getElementById("back-btn")?.addEventListener("click", () => {
-    navigate("/post");
-  });
 }
 
 export async function initializePostEdit() {
