@@ -2,7 +2,7 @@ import { onCreatePost } from "../../ui/post/create.js";
 import { authGuard } from "../../utilities/authGuard.js";
 
 export default function postCreate(navigate) {
-  authGuard();
+  if (!authGuard()) return;
 
   const app = document.getElementById("app");
   app.innerHTML = `

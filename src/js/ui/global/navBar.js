@@ -1,4 +1,5 @@
 import { onLogout } from "../auth/logout.js";
+import { navigate } from "../../router/index.js";
 
 const navigationData = {
   logo: {
@@ -152,14 +153,8 @@ export function initializeNavigation() {
   document.querySelectorAll(".nav-item").forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-
       const targetRoute = item.getAttribute("href");
-
-      window.history.pushState({}, "", targetRoute);
-
-      import("../../router/index.js").then((module) => {
-        module.default(targetRoute);
-      });
+      navigate(targetRoute);
     });
   });
 }
