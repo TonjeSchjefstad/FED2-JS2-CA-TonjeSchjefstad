@@ -1,3 +1,12 @@
+/**
+ * Displays a temporary message on the screen.
+ * Creates a div element, sets its content and style based on the type of message.
+ * @param {string} message - The message to display 
+ * @param {"success" | "error" | "warning" | "info"} [type="info"] - The type of message, which determines its styling.
+ * @param {number} [duration=3000] - Duration before the message disappears.
+ * @returns {void}
+ */
+
 export function showMessage(message, type = "info", duration = 3000) {
   const messageDiv = document.createElement("div");
   messageDiv.className = `message ${type}`;
