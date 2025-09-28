@@ -84,6 +84,7 @@ npm run build
 - loginUser (src/js/api/auth/login.js) → Handles user authentication
 - registerUser (src/js/api/auth/register.js) → Creates a new user account
 - createPost (src/js/api/post/create.js) → Sends a new post to the API
+- showMessage (src\js\utilities\showMessage.js) -> Displays a temporary message on the screen
 
 ## Contact
 - My LinkedIn page: https://www.linkedin.com/in/tonjeschjefstad/
