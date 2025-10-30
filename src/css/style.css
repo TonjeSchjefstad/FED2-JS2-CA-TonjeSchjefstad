@@ -1,50 +1,33 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import "../css/base/_reset.css";
-@import "../css/base/_variables.css";
 
 @import "../css/components/_buttons.css";
 @import "../css/components/_forms.css";
 
-@import "../css/pages/_landing.css";
 @import "../css/pages/_profile.css";
 @import "../css/pages/_crud.css";
 @import "../css/pages/_feed.css";
 @import "../css/pages/_notFound.css";
 
-body {
-  margin: 0;
-  color: var(--primary-text-color);
-  background-color: var(--primary-background-color);
-}
+@theme {
+  --color-primary-bg: #F8FAF9;
+  --color-primary-text: #2C3E50;
+  --color-secondary-text: #F5F5F5;
+  --color-button: #6B9080;
+  --color-button-hover: #5A7A6B;
+  --color-button-active: #4F6B5C;
+  --color-footer-bg: #4F6B5C;
+  --color-card: #FDFEFD;
+  --color-card-shadow: #6B9080;
+  --color-border: #D4E2D8;
+  --color-slogan: #A4BEB0;
+  --color-input-bg: #FDFEFD;
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #ffffff;
-  padding: 10px;
-  z-index: 1001;
-}
-
-main {
-  position: relative;
-  top: 80px;
-  margin: 20px auto;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-header);
-  font-size: 2rem;
-  margin: 20px;
-}
-
-p, a, span, li, input, textarea, label, .post-body {
-  font-family: var(--font-family-body);
+  --font-family-header: inter, sans-serif;
+  --font-family-body: inter, sans-serif;
+  --font-family-logo: 'Exo 2', serif;
 }
 
 /* Navigation */
@@ -231,20 +214,6 @@ p, a, span, li, input, textarea, label, .post-body {
 
 /*Desktop */
 @media(min-width: 768px) {
-
-  body {
-    padding-bottom: 0;
-  }
-
-  main {
-    top: 80px;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 2rem;
-    margin: 40px;
-  }
-
   .bottom-nav {
     display: none;
   }
