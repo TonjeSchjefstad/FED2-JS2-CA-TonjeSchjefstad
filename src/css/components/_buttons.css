@@ -1,39 +1,5 @@
 @import url(../base/_variables.css);
 
-/* Primary and secondary styles for buttons */
-.primary-button, .secondary-button {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 15px 80px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 14px;
-}
-
-.primary-button {
-    background-color: var(--button-color);
-    color: var(--secondary-text-color);
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.primary-button:hover {
-    background-color: var(--button-hover-color);
-}
-
-.secondary-button {
-    background-color: #FDFEFD;
-    border: 1px solid #6B9080;
-    color: var(--primary-text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.secondary-button:hover {
-    background-color: var(--button-color);
-    color: var(--secondary-text-color);
-    border: none;
-}
-
 /* Buttons for Create post and Edit Post */
 .create-post .primary-button, .edit-post .primary-button {
     width: 100%;

@@ -96,7 +96,7 @@ export default function postView(navigate) {
       if (post.title) {
         const title = document.createElement("h2");
         title.textContent = post.title;
-        title.className = "my-0 mb-2.5 text-xl text-primary-text";
+        title.className = "my-0 mb-2.5 text-xl text-primary-text font-bold";
         contentSection.appendChild(title);
       }
 
