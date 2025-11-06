@@ -75,7 +75,7 @@ function renderProfileInfo(profile, currentUser, isOwnProfile) {
 
   const bio = document.createElement("p");
   bio.className = profile.bio
-    ? "text-primary-text m-0 mb-6 leading-relaxed text-base p-4 bg-black/5 rounded-lg"
+    ? "text-primary-text m-0 mb-6 leading-relaxed text-base p-4 bg-gray-100 rounded-lg"
     : "italic text-primary-text m-0 mb-6 bg-transparent p-0";
   bio.textContent = profile.bio || "No bio added yet";
   details.appendChild(bio);
@@ -87,8 +87,11 @@ function renderProfileInfo(profile, currentUser, isOwnProfile) {
   details.appendChild(actionButton);
 
   const header = document.createElement("div");
-  header.className =
-    "flex flex-col items-center text-center gap-8 p-8 rounded-xl mb-8";
+  header.className = `
+    flex flex-col items-center text-center gap-8 rounded-xl
+    ${isOwnProfile ? "mt-14 md:mt-10" : "mt-30 md:mt-30"}
+    mb-4
+  `;
   header.appendChild(avatar);
   header.appendChild(details);
 
@@ -112,7 +115,7 @@ function createStatsSection(profile) {
   statsData.forEach((stat) => {
     const statItem = document.createElement("div");
     statItem.className =
-      "text-center py-1 px-2 rounded-lg bg-black/5 min-w-[60px] md:py-2 md:px-4 md:min-w-[80px]";
+      "text-center py-1 px-2 rounded-lg bg-gray-100 min-w-[60px] md:py-2 md:px-4 md:min-w-[80px]";
 
     const number = document.createElement("span");
     number.className =

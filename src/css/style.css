@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @theme {
   --color-primary-bg: #F8FAF9;
@@ -15,7 +14,7 @@
   --color-slogan: #A4BEB0;
   --color-input-bg: #FDFEFD;
 
-  --font-family-header: inter, sans-serif;
-  --font-family-body: inter, sans-serif;
-  --font-family-logo: 'Exo 2', serif;
+  --font-header: Inter, sans-serif;
+  --font-body: Inter, sans-serif;
+  --font-logo: 'Exo 2', sans-serif;
 }

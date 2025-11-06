@@ -81,7 +81,7 @@ export function createNavigation() {
   return `
     <header class="flex justify-between items-center fixed top-0 left-0 right-0 bg-white p-2.5 z-[1001]">
       <div class="fixed top-5 left-5 z-[1001]">
-        <a href="#" class="relative font-logo text-3xl font-bold p-2.5 -top-2.5 cursor-pointer z-10 text-button-hover no-underline md:p-5 md:top-2.5">${navigationData.logo.text}</a>
+        <span class="relative font-logo text-3xl font-bold p-2.5 -top-2.5 z-10 text-button-hover md:p-5 md:top-2.5">${navigationData.logo.text}</span>
       </div>
 
       <div class="ml-auto">
