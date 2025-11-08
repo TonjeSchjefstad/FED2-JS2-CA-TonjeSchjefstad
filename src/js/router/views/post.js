@@ -10,20 +10,19 @@ export default function postView(navigate) {
 
   app.innerHTML = `
     <div class="mx-5 my-8">
-  <div class="text-center">
-    <h1 class="font-logo font-bold text-3xl md:text-4xl mb-0 text-primary-text">Feel the Moment</h1>
-    <p class="text-base mb-1 text-primary-text md:text-lg">Where memories become connection.</p>
-  </div>
+      <div class="text-center">
+        <h1 class="font-logo font-bold text-3xl md:text-4xl mb-0 text-primary-text">Feel the Moment</h1>
+        <p class="text-base mb-1 text-primary-text md:text-lg">Where memories become connection.</p>
+      </div>
 
-  <div class="flex justify-center my-5">
-    <input 
-      type="text" 
-      class="w-4/5 max-w-2xl px-4 py-2.5 border border-button rounded-full text-base bg-card text-primary-text text-center focus:outline-none focus:border-button focus:shadow-[0_0_5px_rgba(107,144,128,0.5)] hover:border-button" 
-      id="post-search" 
-      placeholder="Search posts" 
-    />
-  </div>
-
+      <div class="flex justify-center my-5">
+        <input 
+          type="text" 
+          class="w-4/5 max-w-2xl px-4 py-2.5 border border-button rounded-full text-base bg-card text-primary-text text-center focus:outline-none focus:border-button focus:shadow-[0_0_5px_rgba(107,144,128,0.5)] hover:border-button" 
+          id="post-search" 
+          placeholder="Search posts" 
+        />
+      </div>
   <div id="display-container" class="mb-5"></div>
 </div>
   `;

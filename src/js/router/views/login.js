@@ -12,7 +12,7 @@ export default function loginView(navigate) {
           </svg>
           Back to Home
         </a>
-        <h1 class="text-4xl font-bold mb-2.5 text-primary-text md:text-5xl">Login</h1>
+        <h1 class="text-4xl font-heading font-bold mb-2.5 text-primary-text md:text-5xl">Login</h1>
         <form name="login" id="login-form" class="flex flex-col gap-5">
           <div class="flex flex-col gap-1">
             <label for="email" class="text-primary-text">Email</label>

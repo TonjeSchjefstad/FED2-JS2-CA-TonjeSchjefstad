@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @theme {
   --color-primary-bg: #F8FAF9;
   --color-primary-text: #2C3E50;
@@ -7,14 +9,17 @@
   --color-button: #6B9080;
   --color-button-hover: #5A7A6B;
   --color-button-active: #4F6B5C;
-  --color-footer-bg: #4F6B5C;
   --color-card: #FDFEFD;
   --color-card-shadow: #6B9080;
   --color-border: #D4E2D8;
   --color-slogan: #A4BEB0;
   --color-input-bg: #FDFEFD;
 
-  --font-header: Inter, sans-serif;
-  --font-body: Inter, sans-serif;
-  --font-logo: 'Exo 2', sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Inter", sans-serif;
+  --font-logo: "Exo 2", sans-serif;
+}
+
+.btn-primary {
+  @apply w-full mt-2.5 px-6 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover: bg-button-hover;
 }

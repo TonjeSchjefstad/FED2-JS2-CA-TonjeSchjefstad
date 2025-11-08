@@ -13,7 +13,7 @@ export default function registerView(navigate) {
           </svg>
           Back to Home
         </a>
-        <h1 class="text-4xl font-bold mb-2.5 text-primary-text md:text-5xl">Register</h1>
+        <h1 class="text-4xl font-heading font-bold mb-2.5 text-primary-text md:text-5xl">Register</h1>
         <form name="register" id="register-form" class="flex flex-col gap-5">
           <div class="flex flex-col gap-1">
             <label for="name" class="text-primary-text">Username</label>

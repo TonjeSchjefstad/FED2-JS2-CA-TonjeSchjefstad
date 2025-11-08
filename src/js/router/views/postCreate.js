@@ -7,7 +7,7 @@ export default function postCreate(navigate) {
   const app = document.getElementById("app");
   app.innerHTML = `
     <form class="max-w-[calc(100%-40px)] mx-auto my-5 px-5 pt-12 pb-16 bg-card rounded-2xl shadow-md md:max-w-3xl" name="create-post" id="create-post-form">
-      <h1 class="text-center text-3xl font-bold text-primary-text mb-5">Create Post</h1>
+      <h1 class="text-center text-3xl font-heading font-bold text-primary-text mb-5">Create Post</h1>
       
       <div class="mb-5">
         <label for="title" class="block mb-2 font-medium text-sm text-primary-text">Title</label>

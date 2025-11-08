@@ -13,12 +13,20 @@ export function showError(message, options = {}) {
   if (!container) return;
 
   container.innerHTML = `
-    <div class="error-message">
-      <h2>${title}</h2>
-      <p>${message}</p>
-      <div class="error-actions">
-        ${showReloadButton ? `<button id="try-again-btn" class="primary-button">Try Again</button>` : ""}
-        ${showBackButton ? `<button id="back-btn" class="secondary-button">Back</button>` : ""}
+    <div class="max-w-lg mx-auto mt-12 p-8 text-center bg-white rounded-lg shadow-md">
+      <h2 class="text-2xl font-bold text-red-600 mb-4">${title}</h2>
+      <p class="text-gray-700 mb-6">${message}</p>
+      <div class="flex justify-center gap-4">
+        ${
+          showReloadButton
+            ? `<button id="try-again-btn" class="px-20 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hover">Try Again</button>`
+            : ""
+        }
+        ${
+          showBackButton
+            ? `<button id="back-btn" class="px-20 py-4 bg-white border border-button text-button font-semibold rounded-xl shadow-md cursor-pointer transition-colors duration-300 hover:bg-button hover:text-secondary-text">Back</button>`
+            : ""
+        }
       </div>
     </div>
   `;

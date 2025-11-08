@@ -69,14 +69,14 @@ function renderProfileInfo(profile, currentUser, isOwnProfile) {
 
   const name = document.createElement("h1");
   name.className =
-    "m-0 mb-2 text-2xl font-bold text-primary-text leading-tight md:text-3xl";
+    "m-0 mb-2 text-2xl font-heading font-bold text-primary-text leading-tight md:text-3xl";
   name.textContent = profile.name;
   details.appendChild(name);
 
   const bio = document.createElement("p");
   bio.className = profile.bio
     ? "text-primary-text m-0 mb-6 leading-relaxed text-base p-4 bg-gray-100 rounded-lg"
-    : "italic text-primary-text m-0 mb-6 bg-transparent p-0";
+    : "italic text-primary-tex m-0 mb-6 bg-transparent p-0";
   bio.textContent = profile.bio || "No bio added yet";
   details.appendChild(bio);
 

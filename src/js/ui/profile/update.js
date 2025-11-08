@@ -15,7 +15,6 @@ export function renderEditForm(profile) {
     <div class="max-w-[calc(100%-40px)] mx-auto mt-8 mb-5 px-5 pt-2.5 pb-16 bg-card rounded-2xl shadow-md md:max-w-2xl">
       <form id="profile-update-form">
         <h1 class="text-center text-3xl pt-10 font-bold text-primary-text mb-5">Edit Profile</h1>
-        
         <div class="mb-6">
           <label for="bio" class="block mb-2 font-medium text-sm text-primary-text">Bio</label>
           <textarea 

@@ -4,8 +4,8 @@ export default function homeView(routerNavigate) {
     <section class="flex flex-col md:flex-row md:min-h-screen w-full">
       <section class="flex flex-col items-center justify-center px-4 pt-40 md:pt-50 md:w-1/2 md:px-5">
         <div class="flex flex-col items-center">
-          <h1 class="text-3xl font-bold text-primary-text mb-3 md:text-4xl">Welcome to</h1>
-          <h1 class="text-6xl font-bold font-logo text-primary-text my-0 md:text-7xl">Pulse</h1>
+          <h1 class="font-heading text-3xl font-bold text-primary-text mb-3 md:text-4xl">Welcome to</h1>
+          <h1 class="font-logo text-6xl font-bold text-primary-text my-0 md:text-7xl">Pulse</h1>
           <p class="text-lg text-primary-text text-center my-8 mx-12 max-w-xs md:text-xl md:max-w-sm">
             Share the moments you never want to forget with the friends who matter most.
           </p>
@@ -29,8 +29,8 @@ export default function homeView(routerNavigate) {
         class="flex flex-col justify-center items-center bg-cover bg-center h-80 md:w-1/2 md:h-auto"
         style="background-image: url('/public/images/background.webp');"
       >
-        <h2 class="text-3xl font-extralight text-slogan tracking-widest md:text-6xl md:mt-2">Feel the</h2>
-        <h2 class="text-3xl font-bold text-slogan tracking-widest md:text-6xl">moment</h2>
+        <h2 class="text-3xl font-extralight  text-slogan tracking-widest md:text-6xl md:mt-2">Feel the</h2>
+        <h2 class="text-3xl font-heading font-bold text-slogan tracking-widest md:text-6xl">moment</h2>
       </section>
     </section>
   `;
