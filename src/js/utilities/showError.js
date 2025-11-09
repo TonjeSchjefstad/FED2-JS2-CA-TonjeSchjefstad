@@ -19,7 +19,7 @@ export function showError(message, options = {}) {
       <div class="flex justify-center gap-4">
         ${
           showReloadButton
-            ? `<button id="try-again-btn" class="px-20 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hover">Try Again</button>`
+            ? `<button id="try-again-btn" class="px-20 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hovered">Try Again</button>`
             : ""
         }
         ${

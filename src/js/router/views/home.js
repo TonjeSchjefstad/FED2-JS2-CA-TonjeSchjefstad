@@ -12,13 +12,13 @@ export default function homeView(routerNavigate) {
           <div class="flex flex-col gap-5 mt-5 mb-24 w-full max-w-xs">
             <button 
               id="login-button" 
-              class="w-full px-6 py-3 bg-button text-white font-semibold rounded-lg hover:bg-button-hover active:bg-button-active transition-colors"
+              class="w-full px-6 py-3 bg-button text-white font-semibold rounded-lg hover:bg-button-hovered active:bg-button-active transition-colors"
             >
               Login
             </button>
             <button 
               id="signup-button" 
-              class="w-full px-6 py-3 bg-white text-button font-semibold rounded-lg border-2 border-button hover:bg-button-hover hover:text-white transition-colors"
+              class="w-full px-6 py-3 bg-white text-button font-semibold rounded-lg border-2 border-button hover:bg-button-hovered hover:text-white transition-colors"
             >
               Sign Up
             </button>

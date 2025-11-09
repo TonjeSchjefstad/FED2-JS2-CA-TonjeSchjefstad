@@ -144,12 +144,12 @@ function createActionButton(profile, currentUser, isOwnProfile) {
 
   if (isOwnProfile) {
     button.className =
-      "w-full px-20 py-3 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hover";
+      "w-full px-20 py-3 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hovered";
     button.textContent = "Edit Profile";
     button.onclick = () => navigate("/profile/edit/");
   } else {
     button.className =
-      "py-3.5 px-12 text-sm border-none rounded-xl cursor-pointer bg-button text-white transition-colors duration-200 hover:bg-button-hover";
+      "py-3.5 px-12 text-sm border-none rounded-xl cursor-pointer bg-button text-white transition-colors duration-200 hover:bg-button-hovered";
     button.id = "follow-button";
     updateFollowButton(button, profile, currentUser);
   }
@@ -165,7 +165,7 @@ async function updateFollowButton(button, targetProfile, currentUser) {
     button.textContent = following ? "Unfollow" : "Follow";
     button.className = following
       ? "py-3.5 px-12 text-sm border-none rounded-xl cursor-pointer bg-button-hover text-white transition-colors duration-200 hover:bg-button-active"
-      : "py-3.5 px-12 text-sm border-none rounded-xl cursor-pointer bg-button text-white transition-colors duration-200 hover:bg-button-hover";
+      : "py-3.5 px-12 text-sm border-none rounded-xl cursor-pointer bg-button text-white transition-colors duration-200 hover:bg-button-hovered";
     button.disabled = false;
 
     button.onclick = async () => {
@@ -284,7 +284,7 @@ function createPostElement(post, currentUser, postOverlay) {
 
     const editBtn = document.createElement("button");
     editBtn.className =
-      "py-3 px-6 text-base font-semibold text-white bg-button border-none rounded-lg cursor-pointer transition-colors duration-300 hover:bg-button-hover";
+      "py-3 px-6 text-base font-semibold text-white bg-button border-none rounded-lg cursor-pointer transition-colors duration-300 hover:bg-button-hovered";
     editBtn.textContent = "Edit";
     editBtn.onclick = () => navigate(`/post/edit/?id=${post.id}`);
 

@@ -60,7 +60,7 @@ const navigationData = {
 
 export function createNavItem(item) {
   return `
-    <a href="${item.href}" class="nav-item flex flex-col items-center no-underline text-primary-text transition-all duration-200 py-2 px-4 rounded-xl min-w-[60px] hover:bg-button-hover hover:text-secondary-text">
+    <a href="${item.href}" class="nav-item flex flex-col items-center no-underline text-primary-text transition-all duration-200 py-2 px-4 rounded-xl min-w-[60px] hover:bg-button-hovered hover:text-secondary-text">
       <svg class="w-6 h-6 mb-1 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         ${item.icon}
       </svg>
@@ -85,7 +85,7 @@ export function createNavigation() {
       </div>
 
       <div class="ml-auto">
-        <button class="flex items-center relative bg-button text-white py-2.5 px-8 rounded-lg ml-auto mr-4 z-[9999] cursor-pointer shadow-md font-semibold text-base border-none transition-colors duration-300 hover:bg-button-hover" id="logout-button">
+        <button class="flex items-center relative bg-button text-white py-2.5 px-8 rounded-lg ml-auto mr-4 z-[9999] cursor-pointer shadow-md font-semibold text-base border-none transition-colors duration-300 hover:bg-button-hovered" id="logout-button">
           <span>${navigationData.logout.label}</span>
         </button>
       </div>

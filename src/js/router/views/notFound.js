@@ -11,7 +11,7 @@ export default function notFoundView(navigate) {
         </p>
         <div class="flex justify-center gap-4">
           <button 
-            class="px-20 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hover" 
+            class="px-20 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hovered" 
             id="go-home"
           >
             Go Home

@@ -46,7 +46,7 @@ export default function postEdit(navigate) {
 
       <button 
         type="submit" 
-        class="w-full mt-2.5 px-6 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hover"
+        class="w-full mt-2.5 px-6 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hovered"
       >
         Edit Post
       </button>

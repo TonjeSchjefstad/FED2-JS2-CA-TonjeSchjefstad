@@ -38,7 +38,7 @@ export default function loginView(navigate) {
           </div>
           <button 
             type="submit" 
-            class=" max-w-80 px-6 py-3 bg-button text-white font-semibold rounded-lg hover:bg-button-hover active:bg-button-active transition-colors" 
+            class=" max-w-80 px-6 py-3 bg-button text-white font-semibold rounded-lg hover:bg-button-hovered active:bg-button-active transition-colors" 
             id="login-button"
           >
             Login

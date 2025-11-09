@@ -43,7 +43,7 @@ export function renderEditForm(profile) {
           <button 
             type="submit" 
             id="save-button" 
-            class="w-full mt-5 px-6 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hover"
+            class="w-full mt-5 px-6 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hovered"
           >
             Save Changes
           </button>
