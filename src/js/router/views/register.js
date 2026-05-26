@@ -70,7 +70,7 @@ export default function registerView(navigate) {
 
       <section 
         class="h-80 p-5 text-center flex flex-col justify-center items-center bg-cover bg-center md:w-1/2 md:h-screen"
-        style="background-image: url('/public/images/background.webp');"
+        style="background-image: url('/images/background.webp');"
       >
         <h2 class="text-3xl font-extralight text-slogan tracking-widest md:text-6xl md:mt-2">Feel the</h2>
         <h2 class="text-3xl font-bold text-slogan tracking-widest md:text-6xl">moment</h2>
