@@ -106,7 +106,11 @@ git checkout -b feature/your-feature-name
 Please make sure your code is clean and tested before submitting a PR.
 
 ## Contact
+### Tonje Schjefstad
+Frontend Development Student
+Noroff School of Technology and Digital Media
 
-- My LinkedIn page: https://www.linkedin.com/in/tonjeschjefstad/
-- My GitHub Profile: https://github.com/TonjeSchjefstad
-- Email: Tonje_schjefen@hotmail.com
+- LinkedIn: https://www.linkedin.com/in/tonjeschjefstad/
+- GitHub: https://github.com/TonjeSchjefstad
+- Student email: tonsch03841@stud.noroff.no
+- Private email: Tonje_schjefen@hotmail.com
