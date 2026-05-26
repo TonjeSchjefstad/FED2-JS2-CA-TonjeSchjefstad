@@ -70,6 +70,9 @@ export function createNavItem(item) {
 }
 
 export function createNavigation() {
+  const loggedIn = localStorage.getItem("loggedIn") === "true";
+  const logoHref = loggedIn ? "/post/" : "/";
+
   const topNavItems = navigationData.desktopItems
     .map((item) => createNavItem(item))
     .join("");
@@ -81,7 +84,7 @@ export function createNavigation() {
   return `
     <header class="flex justify-between items-center fixed top-0 left-0 right-0 bg-white p-2.5 z-[1001]">
       <div class="fixed top-5 left-5 z-[1001]">
-        <span class="relative font-logo text-3xl font-bold p-2.5 -top-2.5 z-10 text-button-hover md:p-5 md:top-2.5">${navigationData.logo.text}</span>
+        <a href="${logoHref}" class="logo-link relative font-logo text-3xl font-bold p-2.5 -top-2.5 z-10 text-button-hover md:p-5 md:top-2.5 no-underline">${navigationData.logo.text}</a>
       </div>
 
       <div class="ml-auto">
@@ -168,4 +171,12 @@ export function initializeNavigation() {
       navigate(targetRoute);
     });
   });
+
+  const logoLink = document.querySelector(".fixed.top-5 a");
+  if (logoLink) {
+    logoLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate(logoLink.getAttribute("href"));
+    });
+  }
 }
