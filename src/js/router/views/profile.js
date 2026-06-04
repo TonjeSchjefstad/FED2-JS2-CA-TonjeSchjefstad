@@ -19,19 +19,21 @@ export default function profileView(navigate) {
   const postOverlay = new PostOverlay();
 
   app.innerHTML = `
-    <section id="profile-info">
-      <div class="text-center p-8 text-gray-600">
-        <div class="border-4 border-gray-200 border-t-button rounded-full w-8 h-8 animate-spin mx-auto mb-4"></div>
-        <p class="m-0 text-sm">Loading profile...</p>
-      </div>
-    </section>
+    <div class="max-w-5xl mx-auto px-5">
+      <section id="profile-info">
+        <div class="text-center p-8 text-gray-600">
+          <div class="border-4 border-gray-200 border-t-button rounded-full w-8 h-8 animate-spin mx-auto mb-4"></div>
+          <p class="m-0 text-sm">Loading profile...</p>
+        </div>
+      </section>
 
-    <section id="user-posts">
-      <div class="text-center p-8 text-gray-600">
-        <div class="border-4 border-gray-200 border-t-button rounded-full w-8 h-8 animate-spin mx-auto mb-4"></div>
-        <p class="m-0 text-sm">Loading posts...</p>
-      </div>
-    </section>
+      <section id="user-posts">
+        <div class="text-center p-8 text-gray-600">
+          <div class="border-4 border-gray-200 border-t-button rounded-full w-8 h-8 animate-spin mx-auto mb-4"></div>
+          <p class="m-0 text-sm">Loading posts...</p>
+        </div>
+      </section>
+    </div>
   `;
 
   initializeProfilePage(postOverlay);

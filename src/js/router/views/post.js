@@ -9,7 +9,7 @@ export default function postView(navigate) {
   const postOverlay = new PostOverlay();
 
   app.innerHTML = `
-    <div class="mx-5 my-8">
+    <div class="mx-auto my-8 max-w-5xl px-5">
       <div class="text-center">
         <h1 class="font-logo font-bold text-3xl md:text-4xl mb-0 text-primary-text">Feel the Moment</h1>
         <p class="text-base mb-1 text-primary-text md:text-lg">Where memories become connection.</p>
