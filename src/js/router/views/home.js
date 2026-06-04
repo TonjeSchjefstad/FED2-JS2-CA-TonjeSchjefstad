@@ -1,24 +1,37 @@
 export default function homeView(routerNavigate) {
   const app = document.getElementById("app");
   app.innerHTML = `
-    <section class="landing-main">
-      <div class="welcome-container">
-        <section class="welcome-section">
-          <h1 class="h1-welcome-small">Welcome to</h1>
-          <h1 class="h1-welcome-big">Pulse</h1>
-          <p class="welcome-p">
+    <section class="flex flex-col md:flex-row md:min-h-screen w-full">
+      <section class="flex flex-col items-center justify-center px-4 pt-40 md:pt-50 md:w-1/2 md:px-5">
+        <div class="flex flex-col items-center">
+          <h1 class="font-heading text-3xl font-bold text-primary-text mb-3 md:text-4xl">Welcome to</h1>
+          <h1 class="font-logo text-6xl font-bold text-primary-text my-0 md:text-7xl">Pulse</h1>
+          <p class="text-lg text-primary-text text-center my-8 mx-12 max-w-xs md:text-xl md:max-w-sm">
             Share the moments you never want to forget with the friends who matter most.
           </p>
-          <div class="button-section">
-            <button id="login-button" class="primary-button">Login</button>
-            <button id="signup-button" class="secondary-button">Sign Up</button>
+          <div class="flex flex-col gap-5 mt-5 mb-24 w-full max-w-xs">
+            <button 
+              id="login-button" 
+              class="w-full px-6 py-3 bg-button text-white font-semibold rounded-lg hover:bg-button-hovered active:bg-button-active transition-colors"
+            >
+              Login
+            </button>
+            <button 
+              id="signup-button" 
+              class="w-full px-6 py-3 bg-white text-button font-semibold rounded-lg border-2 border-button hover:bg-button-hovered hover:text-white transition-colors"
+            >
+              Sign Up
+            </button>
           </div>
-        </section>
-        <section class="slogan-section">
-          <h2 class="slogan-thin">Feel the</h2>
-          <h2 class="slogan-thick">moment</h2>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section 
+        class="flex flex-col justify-center items-center bg-cover bg-center h-80 md:w-1/2 md:h-auto"
+        style="background-image: url('/images/background.webp');"
+      >
+        <h2 class="text-3xl font-extralight  text-slogan tracking-widest md:text-6xl md:mt-2">Feel the</h2>
+        <h2 class="text-3xl font-heading font-bold text-slogan tracking-widest md:text-6xl">moment</h2>
+      </section>
     </section>
   `;
 

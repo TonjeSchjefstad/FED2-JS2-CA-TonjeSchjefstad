@@ -59,18 +59,20 @@ const navigationData = {
 };
 
 export function createNavItem(item) {
-  const createClass = item.isCreate ? " create" : "";
   return `
-    <a href="${item.href}" class="nav-item${createClass}">
-      <svg class="nav-icon" viewBox="0 0 24 24">
+    <a href="${item.href}" class="nav-item flex flex-col items-center no-underline text-primary-text transition-all duration-200 py-2 px-4 rounded-xl min-w-[60px] hover:bg-button-hovered hover:text-secondary-text">
+      <svg class="w-6 h-6 mb-1 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         ${item.icon}
       </svg>
-      <span class="nav-label">${item.label}</span>
+      <span class="text-xs mt-1">${item.label}</span>
     </a>
   `;
 }
 
 export function createNavigation() {
+  const loggedIn = localStorage.getItem("loggedIn") === "true";
+  const logoHref = loggedIn ? "/post/" : "/";
+
   const topNavItems = navigationData.desktopItems
     .map((item) => createNavItem(item))
     .join("");
@@ -80,31 +82,30 @@ export function createNavigation() {
     .join("");
 
   return `
-    <header>
-      <div class="logo-container">
-        <a href="${"#"}" class="logo-name">${navigationData.logo.text}</a>
+    <header class="flex justify-between items-center fixed top-0 left-0 right-0 bg-white p-2.5 z-[1001]">
+      <div class="fixed top-5 left-5 z-[1001]">
+        <a href="${logoHref}" class="logo-link relative font-logo text-3xl font-bold p-2.5 -top-2.5 z-10 text-button-hover md:p-5 md:top-2.5 no-underline">${navigationData.logo.text}</a>
       </div>
 
-      <div class="logout-container">
-        <button class="logout-button" id="logout-button">
-
-          <span class="logout-label">${navigationData.logout.label}</span>
+      <div class="ml-auto">
+        <button class="flex items-center relative bg-button text-white py-2.5 px-8 rounded-lg ml-auto mr-4 z-[9999] cursor-pointer shadow-md font-semibold text-base border-none transition-colors duration-300 hover:bg-button-hovered" id="logout-button">
+          <span>${navigationData.logout.label}</span>
         </button>
       </div>
 
-      <nav class="top-nav">
-        <div class="nav-container">
+      <nav class="hidden md:block md:fixed md:top-0 md:left-0 md:right-0 md:bg-primary-bg md:py-3 md:z-10">
+        <div class="flex justify-around items-center max-w-[500px] mx-auto px-5">
           ${topNavItems}
         </div>
       </nav>
 
-      <nav class="bottom-nav">
-        <div class="nav-container">
+      <nav class="block fixed bottom-0 left-0 right-0 bg-card border-t border-gray-300 shadow-[0_-2px_6px_rgba(0,0,0,0.1)] z-[1000] pt-2 pb-5 md:hidden">
+        <div class="flex justify-around items-center max-w-[500px] mx-auto px-5">
           ${bottomNavItems}
         </div>
       </nav>
     </header>
-     `;
+  `;
 }
 
 export function initializeNavigation() {
@@ -120,12 +121,25 @@ export function initializeNavigation() {
   const shouldShowNav = authenticatedPages.includes(currentPath);
 
   if (!shouldShowNav) {
+    const mainElement = document.getElementById("app");
+    if (mainElement) {
+      mainElement.classList.remove("top-20");
+    }
     return;
   }
 
   const loggedIn = localStorage.getItem("loggedIn") === "true";
   if (!loggedIn) {
+    const mainElement = document.getElementById("app");
+    if (mainElement) {
+      mainElement.classList.remove("top-20");
+    }
     return;
+  }
+
+  const mainElement = document.getElementById("app");
+  if (mainElement) {
+    mainElement.classList.add("top-20");
   }
 
   const navHTML = createNavigation();
@@ -157,4 +171,12 @@ export function initializeNavigation() {
       navigate(targetRoute);
     });
   });
+
+  const logoLink = document.querySelector(".fixed.top-5 a");
+  if (logoLink) {
+    logoLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate(logoLink.getAttribute("href"));
+    });
+  }
 }

@@ -12,36 +12,44 @@ export function renderEditForm(profile) {
   }
 
   formContainer.innerHTML = `
-    <form id="profile-update-form" class="profile-form">
-      <h1>Edit Profile</h1>
-      <div class="form-group">
-        <label for="bio">Bio</label>
-        <textarea 
-          id="bio" 
-          name="bio" 
-          maxlength="160" 
-          placeholder="Tell people about yourself..."
-          rows="4"
-        >${profile.bio || ""}</textarea>
-      </div>
+    <div class="max-w-[calc(100%-40px)] mx-auto mt-8 mb-5 px-5 pt-2.5 pb-16 bg-card rounded-2xl shadow-md md:max-w-2xl">
+      <form id="profile-update-form">
+        <h1 class="text-center text-3xl pt-10 font-bold text-primary-text mb-5">Edit Profile</h1>
+        <div class="mb-6">
+          <label for="bio" class="block mb-2 font-medium text-sm text-primary-text">Bio</label>
+          <textarea 
+            id="bio" 
+            name="bio" 
+            maxlength="160" 
+            placeholder="Tell people about yourself..."
+            rows="4"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-button resize-y"
+          >${profile.bio || ""}</textarea>
+        </div>
 
-      <div class="form-group">
-        <label for="avatar-url">Avatar URL</label>
-        <input 
-          type="url" 
-          id="avatar-url" 
-          name="avatar-url" 
-          placeholder="https://example.com/image.jpg"
-          value="${profile.avatar?.url || ""}"
-        >
-      </div>
+        <div class="mb-6">
+          <label for="avatar-url" class="block mb-2 font-medium text-sm text-primary-text">Avatar URL</label>
+          <input 
+            type="url" 
+            id="avatar-url" 
+            name="avatar-url" 
+            placeholder="https://example.com/image.jpg"
+            value="${profile.avatar?.url || ""}"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-button"
+          >
+        </div>
 
-      <div class="form-actions">
-        <button type="submit" id="save-button" class="primary-button">
-          Save Changes
-        </button>
-      </div>
-    </form>
+        <div class="text-right">
+          <button 
+            type="submit" 
+            id="save-button" 
+            class="w-full mt-5 px-6 py-4 bg-button text-secondary-text font-semibold rounded-xl shadow-md border-none cursor-pointer transition-colors duration-300 hover:bg-button-hovered"
+          >
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </div>
   `;
 }
 
@@ -100,10 +108,13 @@ async function handleFormSubmit(event) {
 
     await updateUserProfile(currentUser.name, profileData);
     showMessage("Profile updated successfully!", "success");
-    navigate ("/profile");
+    navigate("/profile");
   } catch (error) {
     console.error("Profile update failed:", error);
-    showMessage(error.message || "Failed to update profile. Please try again.", "error");
+    showMessage(
+      error.message || "Failed to update profile. Please try again.",
+      "error"
+    );
   } finally {
     saveButton.disabled = false;
     saveButton.textContent = originalButtonText;
@@ -121,4 +132,3 @@ export async function initializeProfileEdit() {
     showMessage(error.message || "Failed to load profile for editing");
   }
 }
-

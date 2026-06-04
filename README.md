@@ -1,13 +1,17 @@
 # Pulse - Social Media App
+
 ![image](https://i.imghippo.com/files/ILd5513zj.png)
 
 ## Description
+
 This project is a front-end for a social media application where users can create, read, update, and delete their own posts. In addition to post management, the app includes social features such as following and unfollowing other users.
 
 Live Demo: https://pulse-social-media-app.netlify.app/
 
 ## Getting Started
+
 ### Installing
+
 1. Clone the repository:
 
 ```bash
@@ -29,19 +33,18 @@ npm run dev
 ```
 
 Build for production:
+
 ```bash
 npm run build
 ```
 
 ## Project Structure
+
 ```bash
 ├── public/
 │   └── images/
 ├── src/
 │   ├── css/
-│   │  ├── base/ 
-│   │  ├── components/
-│   │  ├── pages/
 │   │  └── style.css
 │   └── js/
 │      ├── api/
@@ -58,19 +61,22 @@ npm run build
 ```
 
 ## Folder highlights
+
 - public/images/ → Assets
-- src/css/ → Stylesheets
+- src/css/ → Stylesheet
 - src/js/ → JavaScript modules
 
 ## Tech Stack
+
 - HTML5
-- CSS
+- Tailwind CSS v4
 - JavaScript ( ES6 modules )
 - Vite ( Single-Page Application setup )
 - Netlify
 - Noroff Social API
 
 ## User Features
+
 - Register new user
 - Login and logout
 - Create, edit and delete posts
@@ -81,14 +87,33 @@ npm run build
 - Follow and unfollow users
 
 ## JSDocs
+
 - loginUser (src/js/api/auth/login.js) → Handles user authentication
 - registerUser (src/js/api/auth/register.js) → Creates a new user account
 - createPost (src/js/api/post/create.js) → Sends a new post to the API
 - showMessage (src\js\utilities\showMessage.js) -> Displays a temporary message on the screen
 
+## Contributing
+Feel free to contribute! Create a new branch and open a Pull Request, and I'll take a look!
+1. Fork the repository
+2. Create a new branch for your feature or fix:
+```bash
+git checkout -b feature/your-feature-name
+```
+3. Make your changes and commit them with a clear message.
+4. Push your branch and open a Pull Request for review.
+
+Please make sure your code is clean and tested before submitting a PR.
+
 ## Contact
-- My LinkedIn page: https://www.linkedin.com/in/tonjeschjefstad/
-- My GitHub Profile: https://github.com/TonjeSchjefstad
-- Email: Tonje_schjefen@hotmail.com
-  
-  
+### Tonje Schjefstad
+Frontend Development Student
+Noroff School of Technology and Digital Media
+
+- LinkedIn: https://www.linkedin.com/in/tonjeschjefstad/
+- GitHub: https://github.com/TonjeSchjefstad
+- Student email: tonsch03841@stud.noroff.no
+- Private email: Tonje_schjefen@hotmail.com
+
+## Acknowledgments
+- Noroff for providing the API used in this project

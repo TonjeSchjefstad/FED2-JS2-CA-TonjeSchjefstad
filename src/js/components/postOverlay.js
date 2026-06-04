@@ -22,9 +22,9 @@ export class PostOverlay {
 
   createOverlayHTML() {
     const overlayHTML = `
-      <div id="post-overlay" class="hidden">
-        <div class="overlay-content">
-          <span id="overlay-close" class="close-button">&times;</span>
+      <div id="post-overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center z-[1000]">
+        <div class="bg-white p-8 rounded-2xl w-11/12 max-w-lg relative">
+          <span id="overlay-close" class="absolute top-5 right-5 bg-transparent border-none text-3xl cursor-pointer text-gray-800 hover:text-button">&times;</span>
           <div id="overlay-body"></div>
         </div>
       </div>
@@ -60,7 +60,8 @@ export class PostOverlay {
     const profileUrl = `/profile/?name=${authorName}`;
 
     const overlayAuthor = document.createElement("div");
-    overlayAuthor.classList.add("overlay-author");
+    overlayAuthor.className =
+      "flex items-center gap-2.5 mb-4 pb-2.5 border-b border-gray-200";
 
     if (authorAvatar) {
       const avatarLink = document.createElement("a");
@@ -69,7 +70,7 @@ export class PostOverlay {
       const avatarImg = document.createElement("img");
       avatarImg.src = authorAvatar;
       avatarImg.alt = authorName + " avatar";
-      avatarImg.classList.add("overlay-author-avatar");
+      avatarImg.className = "w-8 h-8 rounded-full object-cover md:w-10 md:h-10";
 
       avatarLink.appendChild(avatarImg);
 
@@ -85,7 +86,8 @@ export class PostOverlay {
     const nameLink = document.createElement("a");
     nameLink.href = profileUrl;
     nameLink.textContent = authorName;
-    nameLink.classList.add("overlay-author-name");
+    nameLink.className =
+      "font-medium text-gray-800 no-underline md:font-semibold hover:text-button";
 
     nameLink.addEventListener("click", (e) => {
       e.preventDefault();
@@ -103,18 +105,20 @@ export class PostOverlay {
 
     const title = document.createElement("h2");
     title.textContent = post.title || "Untitled";
-    title.classList.add("overlay-h2");
+    title.className = "text-2xl mt-0 mb-2.5 text-primary-text font-bold";
     contentContainer.appendChild(title);
 
     const body = document.createElement("p");
     body.textContent = post.body || "";
+    body.className = "text-gray-600 leading-relaxed mb-4 break-words mt-0";
     contentContainer.appendChild(body);
 
     if (post.media && post.media.url) {
       const mediaImg = document.createElement("img");
       mediaImg.src = post.media.url;
       mediaImg.alt = post.media.alt || "Post image";
-      mediaImg.classList.add("post-media");
+      mediaImg.className =
+        "w-full h-full object-cover max-h-[350px] rounded-2xl";
 
       mediaImg.onerror = function () {
         this.style.display = "none";
